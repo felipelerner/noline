@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Noline | La nueva comunicación</title>
+</head>
+<body onload="main.js" id="body">
+
+<section id="modalContainer">
+    <div id="openModal" class="modalDialog">
+        <div>
+          <h4>No trabajamos con números de clientes, trabajamos con vos.</h4>
+          <p>Ingresá tu nombre para una experiencia personalizada</p>
+          <input type="text" id = "inputName" class="form-control datepicker" placeholder="Ingresá tu nombre">
+        </div>
+      </div>
+</section>
+
+    <section id="start">
+        <!--Navbar-->
+        <div class="nav"></div>
+    </section>
+
+    <section class="home" id="home">
+        <!-- HOME (LOGO)-->
+        <div id="saludo"></div>
+        <img src="./img/noline-02.png" alt="" class="logo"><br>
+        <a href="#selection" class="boton" id="botonContrata"> Contratá  </a>    
+    </section>
+
+    <section class="selection" id="selection">
+        <!--CARDS CON LOS PRODUCTOS-->
+        <div class="container">
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>Internet Móvil 5G</h2><br>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, maiores.</p>
+                    <button class="botonSi" id="siInt">Contratar</button>
+                    <button class="botonNo" id="noInt">Retirar</button>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>Telefonía Móvil</h2><br>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, maiores.</p>
+                    <button class="botonSi" id="siMov">Contratar</button>
+                    <button class="botonNo" id="noMov">Retirar</button>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>Television satelital 4K</h2><br>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, maiores.</p>
+                    <button class="botonSi" id="siTv">Contratar</button>
+                    <button class="botonNo" id="noTv">Retirar</button>
+                </div>
+            </div>
+        </div>
+        <a href="#resumen" class="boton" id="seguir"> Continuar </a>
+    </section>
+    <section id="resumenContainer"></section>
+    <section id="finContra">
+            <div id="finalModal" class="finalModalDialog">
+                <div>
+                  <h4>Finalizá tu contratación</h4>
+                  <p>Completá este pequeño formulario para seguir</p>
+                  <form name="final" id="formFinal">
+                  <input type="text" nombre = "finalInputName" id = "finalInputName" class="form-control datepicker" placeholder="Nombre"><br>
+                  <span></span>
+                  <input type="text" nombre = "finalImputSubname" id = "finalInputSubName" class="form-control datepicker" placeholder="Apellido"><br>
+                  <span id="errorApellido"></span>
+                  <input type="email" nombre = "inputMail" id = "inputMail" class="form-control datepicker" placeholder="Mail"><br>
+                  <span id="errorMail"></span>
+                  <div class="botonFinal" id="botonFinal">Enviar</div><br>
+                  </form>
+                </div>
+            </div>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,363 @@
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior:smooth;
+}
+
+body{
+    background-color: #000;
+}
+
+.nav{
+    height: 13px;
+    width: 100%;
+    background: linear-gradient(45deg, #ffbc00,#03a9f4,#ff0058,#4dff03);
+}
+
+.nav::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, #ffbc00,#03a9f4,#ff0058,#4dff03);
+    filter: blur(25px);
+}
+
+
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home .boton{
+    display: inline-block;
+    font-size: 1rem;
+    background: #000;
+    color: white;
+    padding: 10px 20px;
+    border: solid 2px white;
+    text-decoration: none;
+}
+
+.home div{
+    height: 100px;
+    width: auto;
+}
+#saludo h1{
+    background: linear-gradient(45deg,#03a9f4,#4dff03);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    
+}
+
+.selection{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.selection .boton{
+    display: inline;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000;
+    background: white;
+    padding: 15px 100px;
+    margin-top: 0;
+    border: solid 2px white;
+    text-decoration: none;
+}
+
+#resumenContainer{
+    display: none;
+}
+
+.resumen{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*CARDS DE SERVICIOS*/
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    flex-wrap: wrap;
+}
+
+.container .box{
+    position: relative;
+    width: 320px;
+    height: 400px;
+    color: white;
+    background: #000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 30px;
+    transition: 0.5s;
+}
+
+.container .box:hover{
+    transform: translateY(-12px);
+}
+
+.container .box::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ffbc00,#ff0058);
+}
+.container .box::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ffbc00,#ff0058);
+    filter: blur(30px);
+}
+
+.container .box:nth-child(2):before,
+.container .box:nth-child(2)::after{
+    background: linear-gradient(135deg, #03a9f4,#ff0058);
+}
+
+.container .box:nth-child(3):before,
+.container .box:nth-child(3)::after{
+    background: linear-gradient(135deg, #4dff03,#03a9f4);
+}
+
+.container .box span{
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background:rgba(0,0,0,1);
+    z-index: 2;
+}
+
+.container .box .content{
+    position: relative;
+    z-index: 3;
+    padding: 20px 50px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.container .box .content h2{
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.container .box .content p{
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 70px;
+    line-height: 1.4em;
+}
+
+.container .box .content .botonSi{
+    display: inline-block;
+    font-size: 1rem;
+    background: #000;
+    color: white;
+    padding: 10px 20px;
+    border: solid 2px white;
+
+}
+
+.container .box .content .botonNo{
+    display: none;
+    font-size: 1rem;
+    background: #000;
+    color: rgb(216, 0, 0);
+    padding: 10px 20px;
+    border: solid 3px rgb(216, 0, 0);
+
+}
+
+
+
+/*RESUMEN FINAL*/
+
+.containerResumen{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    flex-wrap: wrap;
+}
+
+.containerResumen .boxResumen{
+    position: relative;
+    width: 750px;
+    height: 500px;
+    color: white;
+    background: #000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 30px;
+}
+
+.containerResumen .boxResumen::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ffbc00,#03a9f4,#ff0058,#4dff03);
+}
+.containerResumen .boxResumen::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ffbc00,#03a9f4,#ff0058,#4dff03);
+    filter: blur(30px);
+}
+
+
+.containerResumen .boxResumen span{
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background:rgba(0,0,0,1);
+    z-index: 2;
+}
+
+.containerResumen .boxResumen .contentResumen{
+    position: relative;
+    height: 100%;
+    z-index: 3;
+    padding: 20px 50px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.containerResumen .boxResumen .contentResumen p{
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 70px;
+    line-height: 1.4em;
+}
+
+.containerResumen .boxResumen .contentResumen h2{
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 70px;
+}
+
+.containerResumen .boxResumen .contentResumen button{
+    display: inline-block;
+    font-size: 1rem;
+    background: #000;
+    color: white;
+    margin: 50px 50px 0px 50px;
+    padding: 10px 100px;
+    border: solid 2px white;
+
+}
+
+/*Modal Nombre*/
+
+.modalDialog {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 99999;
+	display:none;
+	pointer-events: auto;
+}
+.modalDialog > div {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    color: white;
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+    background: #000;
+    border: solid 3px white;
+}
+
+/*Modal Final*/
+
+#finalModal{
+    display: none;
+}
+
+.finalModalDialog {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 99999;
+	display:inline-block;
+	pointer-events: auto;
+}
+.finalModalDialog > div {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    color: white;
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+    padding:30px;
+    background: #000;
+    border: solid 3px white;
+}
+
+.finalModalDialog > div .botonFinal{
+    display: inline;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000;
+    background: white;
+    padding: 10px 30px;
+    margin-top: 0;
+    border: solid 2px white;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+}
