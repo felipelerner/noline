@@ -4,8 +4,37 @@
     scroll-behavior:smooth;
 }
 
+.hidden{
+    overflow: hidden;
+}
+
 body{
     background-color: #000;
+}
+
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+} 
+
+body::-webkit-scrollbar:horizontal {
+    height: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #3d3d3d;
+    border-radius: 20px;
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 1px;  
 }
 
 .nav{

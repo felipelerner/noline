@@ -38,6 +38,7 @@ window.onload = function(){
                     if (nombreUsuario.length >= 3){
                         $("#openModal").fadeOut();
                         $("#saludo").append(`<h1>¡Hola ${nombreUsuario}!</h1>`);
+                        $("#body").removeClass("hidden");
                     } else{
                         alert("Por favor ingresá un nombre válido")
                     }
@@ -48,6 +49,7 @@ window.onload = function(){
         } else if (localStorage.getItem('nombre')!== undefined){
             $("#saludo").append(`<h1>¡Hola de nuevo, ${localStorage.getItem('nombre')}!</h1>`);
             actualizarNombre();
+            $("#body").removeClass("hidden");
         }
     });
 
